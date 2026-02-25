@@ -164,6 +164,8 @@
         body.dark-mode .hover\:bg-neo-yellow:hover { background-color: #1a7a3a !important; }
         body.dark-mode nav .bg-neo-white { background-color: #111a14 !important; }
         body.dark-mode nav a { color: #d0f0d8 !important; }
+        body.dark-mode #mobile-menu .bg-white { background-color: #111a14 !important; }
+        body.dark-mode #mobile-menu a { color: #d0f0d8 !important; border-color: #2a5c35 !important; }
         body.dark-mode .text-gray-400 { color: #5a9e6a !important; }
         body.dark-mode .text-gray-500 { color: #4a8e5a !important; }
         body.dark-mode input, body.dark-mode textarea {
@@ -287,13 +289,14 @@
     <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar" style="width: 0%">
     </div>
 
-    <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
+    <nav class="fixed top-0 w-full z-50 px-4 py-2 md:py-4 pointer-events-none">
         <div class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
             <a href="#"
-                class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
+                class="bg-neo-white border-2 border-black px-3 py-0.5 md:px-4 md:py-1 text-lg md:text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
                 BATUR.exe
             </a>
 
+            <!-- Desktop nav -->
             <div class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard">
                 <a href="#about"
                     class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/ABOUT</a>
@@ -307,8 +310,36 @@
                     class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/WORK</a>
                 <a href="#contact"
                     class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover">CONNECT</a>
-                <button id="dark-toggle" onclick="document.body.classList.toggle('dark-mode'); document.getElementById('dark-toggle').innerHTML = document.body.classList.contains('dark-mode') ? '<i class=\'ri-sun-line text-lg\'></i>' : '<i class=\'ri-moon-line text-lg\'></i>';"
+                <button id="dark-toggle" onclick="toggleDark()"
                     class="px-3 py-0.4 text-lg border border-black bg-white hover:bg-gray-100 transition-colors cursor-hover" title="Toggle dark mode"><i class="ri-sun-line text-lg"></i></button>
+            </div>
+
+            <!-- Mobile: dark toggle + hamburger -->
+            <div class="flex md:hidden items-center gap-2 pointer-events-auto">
+                <button id="dark-toggle-mobile" onclick="toggleDark()"
+                    class="px-2 py-0.5 text-base border-2 border-black bg-white hover:bg-gray-100 transition-colors shadow-hard-sm" title="Toggle dark mode"><i class="ri-sun-line text-base"></i></button>
+                <button id="hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                    class="px-2 py-1 border-2 border-black bg-neo-white font-black text-lg shadow-hard-sm hover:bg-neo-yellow transition-all">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="hidden md:hidden pointer-events-auto mt-2 max-w-7xl mx-auto">
+            <div class="bg-white border-2 border-black shadow-hard flex flex-col">
+                <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="px-5 py-3 font-mono font-bold text-sm border-b border-black hover:bg-black hover:text-white transition-colors">/ABOUT</a>
+                <a href="#skills" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="px-5 py-3 font-mono font-bold text-sm border-b border-black hover:bg-black hover:text-white transition-colors">/SKILLS</a>
+                <a href="#experience" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="px-5 py-3 font-mono font-bold text-sm border-b border-black hover:bg-black hover:text-white transition-colors">/LOGS</a>
+                <a href="#education" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="px-5 py-3 font-mono font-bold text-sm border-b border-black hover:bg-black hover:text-white transition-colors">/EDU</a>
+                <a href="#projects" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="px-5 py-3 font-mono font-bold text-sm border-b border-black hover:bg-black hover:text-white transition-colors">/WORK</a>
+                <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="px-5 py-3 font-mono font-bold text-sm bg-neo-yellow border-black hover:bg-neo-pink transition-colors font-black">CONNECT</a>
             </div>
         </div>
     </nav>
@@ -1182,6 +1213,26 @@
     </footer>
 
     <script>
+        // ── Dark Mode Toggle (shared between desktop + mobile buttons) ──
+        function toggleDark() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            const icon = isDark ? '<i class="ri-sun-line text-lg"></i>' : '<i class="ri-moon-line text-lg"></i>';
+            const d = document.getElementById('dark-toggle');
+            const m = document.getElementById('dark-toggle-mobile');
+            if (d) d.innerHTML = icon;
+            if (m) m.innerHTML = icon;
+        }
+        // Sync icons on load (page starts in dark-mode)
+        (function() {
+            const isDark = document.body.classList.contains('dark-mode');
+            const icon = isDark ? '<i class="ri-sun-line text-lg"></i>' : '<i class="ri-moon-line text-lg"></i>';
+            const d = document.getElementById('dark-toggle');
+            const m = document.getElementById('dark-toggle-mobile');
+            if (d) d.innerHTML = icon;
+            if (m) m.innerHTML = icon;
+        })();
+
         // Contribution Graph Generator
         (function () {
             const container = document.getElementById('contrib-graph');
