@@ -1,4 +1,4 @@
-# ARHAM.exe // PORTFOLIO_V2
+# BATURALP.exe // PORTFOLIO_V2
 
 ```
     ___    ____  __  ______    __  ___          ____  ____  ____  __________________  __    ________ 
@@ -87,11 +87,11 @@ It's not about being pretty. It's about being **BOLD**.
 ## /// CONTACT_COORDINATES
 
 **TRANSMISSION OPEN:**
-- **MAIL**: `topiwalaarham@gmail.com`
-- **GITHUB**: `Arham43-ops`
+- **MAIL**: `baturalp@example.com`
+- **GITHUB**: `baturalp-unlu`
 - **LOCATION**: `Remote / Earth`
 
 > "I build digital products that refuse to be boring."
 
 ---
-**© 2025 ARHAM.exe // SYSTEM_END**
+**© 2026 BATURALP.exe // SYSTEM_END**
