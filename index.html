@@ -136,43 +136,58 @@
             transition: background-color 0.4s ease, color 0.4s ease;
         }
 
-        /* ── GREEN DARK MODE ── */
+        /* ── DARK MODE: deep navy + yellow ── */
         body.dark-mode {
-            background-color: #0a110d;
+            background-color: #0d0f1a;
             background-image:
-                radial-gradient(#1a2e1f 1px, transparent 1px),
-                linear-gradient(to right, #111a14 1px, transparent 1px),
-                linear-gradient(to bottom, #111a14 1px, transparent 1px);
+                radial-gradient(#1e2236 1px, transparent 1px),
+                linear-gradient(to right, #141628 1px, transparent 1px),
+                linear-gradient(to bottom, #141628 1px, transparent 1px);
             background-size: 40px 40px, 100px 100px, 100px 100px;
-            color: #d0f0d8;
+            color: #e8e6ff;
         }
 
-        body.dark-mode .bg-white { background-color: #111a14 !important; }
-        body.dark-mode .bg-neo-white { background-color: #111a14 !important; }
-        body.dark-mode .bg-gray-50 { background-color: #0d160f !important; }
-        body.dark-mode .bg-gray-100 { background-color: #0d160f !important; }
-        body.dark-mode .bg-gray-200 { background-color: #162019 !important; }
-        body.dark-mode .text-black { color: #d0f0d8 !important; }
-        body.dark-mode .text-gray-600 { color: #7ab88a !important; }
-        body.dark-mode .text-gray-700 { color: #8ac89a !important; }
-        body.dark-mode .border-black { border-color: #2a5c35 !important; }
-        body.dark-mode .shadow-hard { box-shadow: 4px 4px 0px 0px #2a5c35 !important; }
-        body.dark-mode .shadow-hard-xl { box-shadow: 12px 12px 0px 0px #2a5c35 !important; }
-        body.dark-mode section.bg-white { background-color: #111a14 !important; }
-        body.dark-mode .bg-neo-yellow { background-color: #1a7a3a !important; }
-        body.dark-mode .text-neo-yellow { color: #33FF57 !important; }
-        body.dark-mode .hover\:bg-neo-yellow:hover { background-color: #1a7a3a !important; }
-        body.dark-mode nav .bg-neo-white { background-color: #111a14 !important; }
-        body.dark-mode nav a { color: #d0f0d8 !important; }
-        body.dark-mode #mobile-menu .bg-white { background-color: #111a14 !important; }
-        body.dark-mode #mobile-menu a { color: #d0f0d8 !important; border-color: #2a5c35 !important; }
-        body.dark-mode .text-gray-400 { color: #5a9e6a !important; }
-        body.dark-mode .text-gray-500 { color: #4a8e5a !important; }
+        body.dark-mode .bg-white { background-color: #13152a !important; }
+        body.dark-mode .bg-neo-white { background-color: #13152a !important; }
+        body.dark-mode .bg-gray-50 { background-color: #0f1122 !important; }
+        body.dark-mode .bg-gray-100 { background-color: #0f1122 !important; }
+        body.dark-mode .bg-gray-200 { background-color: #181a2e !important; }
+        body.dark-mode .text-black { color: #e8e6ff !important; }
+        body.dark-mode .text-gray-600 { color: #8b8fc8 !important; }
+        body.dark-mode .text-gray-700 { color: #9b9fd8 !important; }
+        body.dark-mode .border-black { border-color: #3a3d6b !important; }
+        body.dark-mode .shadow-hard { box-shadow: 4px 4px 0px 0px #3a3d6b !important; }
+        body.dark-mode .shadow-hard-xl { box-shadow: 12px 12px 0px 0px #3a3d6b !important; }
+        body.dark-mode section.bg-white { background-color: #13152a !important; }
+        body.dark-mode .bg-neo-yellow { background-color: #4a3f00 !important; }
+        body.dark-mode .text-neo-yellow { color: #FBFF48 !important; }
+        body.dark-mode .hover\:bg-neo-yellow:hover { background-color: #4a3f00 !important; }
+        body.dark-mode nav .bg-neo-white { background-color: #13152a !important; }
+        body.dark-mode nav a { color: #e8e6ff !important; }
+        body.dark-mode #mobile-menu .bg-white { background-color: #13152a !important; }
+        body.dark-mode #mobile-menu a { color: #e8e6ff !important; border-color: #3a3d6b !important; }
+        body.dark-mode .text-gray-400 { color: #6b6fa8 !important; }
+        body.dark-mode .text-gray-500 { color: #5b5f98 !important; }
         body.dark-mode input, body.dark-mode textarea {
-            background-color: #111a14 !important;
-            color: #d0f0d8 !important;
-            border-color: #2a5c35 !important;
+            background-color: #13152a !important;
+            color: #e8e6ff !important;
+            border-color: #3a3d6b !important;
         }
+        /* Selected Works section */
+        body.dark-mode #projects { background-color: #0a0b18 !important; }
+        /* bg-neo-black sections (TECH_STACK, CODING_STATS, PRESS & NEWS) */
+        body.dark-mode #skills { background-color: #07080f !important; border-color: #1e2236 !important; }
+        body.dark-mode #coding-stats { background-color: #07080f !important; border-color: #1e2236 !important; }
+        body.dark-mode #reports { background-color: #07080f !important; border-color: #1e2236 !important; }
+        /* Accent text colors — brighter in dark mode for contrast against navy */
+        body.dark-mode .text-neo-blue { color: #60a5fa !important; }
+        body.dark-mode .text-neo-red { color: #ff6b6b !important; }
+        body.dark-mode .text-neo-orange { color: #ffb347 !important; }
+        body.dark-mode .text-neo-purple { color: #c084fc !important; }
+        body.dark-mode .text-neo-pink { color: #f472b6 !important; }
+        body.dark-mode .text-neo-green { color: #4ade80 !important; }
+        /* group-hover text color fix in dark mode */
+        body.dark-mode .group:hover .group-hover\:text-black { color: #0d0f1a !important; }
 
         * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
 
@@ -182,6 +197,7 @@
         body:not(.dark-mode) .bg-gray-100 { background-color: #ede3d2 !important; }
         body:not(.dark-mode) .bg-gray-200 { background-color: #e8dcc8 !important; }
         body:not(.dark-mode) #cursor { background-color: #8b5e3c !important; }
+        body.dark-mode #cursor { background-color: #FBFF48 !important; }
 
         #cursor {
             pointer-events: none;
@@ -284,7 +300,7 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
+    <div id="cursor" class="w-8 h-8 bg-white rounded-full border-2 border-black hidden lg:block"></div>
 
     <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar" style="width: 0%">
     </div>
@@ -369,8 +385,7 @@
 
             <div class="max-w-3xl mx-auto mb-10 reveal rotate-1 flex flex-col gap-3">
                 <p class="font-mono text-lg md:text-xl bg-neo-yellow border-2 border-black p-4 shadow-hard">
-                    🥇 <b>2021 Tokyo Olympian</b> — swimmer turned software engineer.<br>
-                    I bring the same obsession with speed and precision to code.
+                    Olympian turned software engineer — I bring the same obsession with speed and precision to code.
                 </p>
                 <p class="font-mono text-sm md:text-base bg-black text-neo-green border-2 border-neo-green p-3 shadow-hard text-left">
                     <span class="text-gray-500">// stack</span><br>
@@ -394,7 +409,7 @@
     <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
         <div class="marquee-container font-mono font-bold text-2xl text-white">
             <div class="marquee-content">
-                /// 2021 TOKYO OLYMPIAN /// SOFTWARE ENGINEER /// NCR VOYIX /// GEORGIA TECH /// 100K+ USERS /// REDIS • OKTA • AWS /// AUTHENTICATION SYSTEMS /// OPEN TO WORK /// 2021 TOKYO OLYMPIAN /// SOFTWARE ENGINEER /// NCR VOYIX ///
+                /// 2021 TOKYO OLYMPIAN /// SOFTWARE ENGINEER /// NCR VOYIX /// GEORGIA TECH /// 100K+ USERS /// REDIS • OKTA • AWS /// AUTHENTICATION SYSTEMS /// OPEN TO WORK /// TURKISH SWIMMER 🇹🇷 /// SOFTWARE ENGINEER /// NCR VOYIX ///
             </div>
         </div>
     </div>
@@ -693,7 +708,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <div class="text-2xl font-black text-neo-green tracking-tighter">901</div>
+                                <div class="text-2xl font-black text-neo-green tracking-tighter">965</div>
                                 <p class="text-[8px] font-mono text-gray-500 uppercase">Contributions / yr</p>
                             </div>
                         </div>
@@ -702,11 +717,11 @@
                         <div class="grid grid-cols-3 gap-3 mb-6 uppercase">
                             <div class="border-2 border-neo-green/30 bg-neo-black/60 p-3 hover:border-neo-green transition-colors">
                                 <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Commits</div>
-                                <div class="text-white font-black text-2xl tracking-tighter">57%</div>
+                                <div class="text-white font-black text-2xl tracking-tighter">56%</div>
                             </div>
                             <div class="border-2 border-neo-green/30 bg-neo-black/60 p-3 hover:border-neo-green transition-colors">
                                 <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Pull Reqs</div>
-                                <div class="text-white font-black text-2xl tracking-tighter">28%</div>
+                                <div class="text-white font-black text-2xl tracking-tighter">29%</div>
                             </div>
                             <div class="border-2 border-neo-green/30 bg-neo-black/60 p-3 hover:border-neo-green transition-colors">
                                 <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Reviews</div>
@@ -718,7 +733,7 @@
                         <div class="flex-1 flex flex-col justify-center mb-6">
                             <div class="bg-neo-black border-2 border-neo-green/30 p-3 hover:border-neo-green transition-colors duration-500 relative">
                                 <div class="absolute top-2 right-2 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse"></div>
-                                <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-2">Contribution_Graph // 901 total</p>
+                                <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-2">Contribution_Graph // 965 total</p>
                                 <div id="contrib-graph" class="flex gap-[3px] overflow-hidden"></div>
                                 <div class="flex items-center gap-2 mt-2 justify-end">
                                     <span class="text-[8px] font-mono text-gray-600">Less</span>
@@ -822,7 +837,7 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 border-t-4 border-black px-4 overflow-hidden" style="background-color:#1a3d2b;">
+    <section id="projects" class="py-24 border-t-4 border-black px-4 overflow-hidden" style="background-color:#1a3d2b; transition: background-color 0.3s ease;">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-black"
                 style="-webkit-text-stroke: 3px black;">
