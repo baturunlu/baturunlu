@@ -102,7 +102,7 @@
         "@type": "Country",
         "name": "Turkey" 
       },
-      "knowsAbout": ["C#", ".NET", "React", "TypeScript", "Python", "SaaS Microservices", "Multi-tenant Architecture", "Authentication", "SSO", "OAuth", "Okta", "Redis", "AWS", "Docker", "Kubernetes", "Identity Access Management", "LaunchDarkly", "Swimming", "Olympic Swimming"],
+      "knowsAbout": ["C#", ".NET", "JavaScript", "TypeScript", "React", "Python", "SQL", "PostgreSQL", "HTML", "CSS", "PyTorch", "NumPy", "AWS", "Docker", "Kubernetes", "GCP", "Redis", "Okta", "LaunchDarkly", "Databricks", "Cypress", "SonarQube", "Git", "JIRA", "SaaS Microservices", "Multi-tenant Architecture", "Authentication", "SSO", "OAuth", "Identity Access Management"],
       "hasOccupation": [
         {
           "@type": "Occupation",
@@ -133,7 +133,7 @@
         "https://www.olympics.com/en/athletes/baturalp-unlu",
         "https://ramblinwreck.com/batur-unlu-wins-200-free-championships-at-day-three-of-accs/"
       ],
-      "description": "Baturalp Unlu (Batur Unlu) is a 2021 Tokyo Olympian and Software Engineer at NCR Voyix in Atlanta, GA. Georgia Tech CS graduate specializing in SaaS microservices, multi-tenant authentication, SSO, OAuth, Okta, and enterprise-scale identity-access platforms supporting 100K+ global users."
+      "description": "Baturalp Unlu (Batur Unlu) is a 2021 Tokyo Olympian and Software Engineer at NCR Voyix in Atlanta, GA. U.S. Permanent Resident and Georgia Tech CS graduate specializing in authentication, SSO, and identity-access platforms for multi-tenant SaaS, supporting 100K+ global users across NCR's enterprise ecosystem."
     }
     </script>
 
@@ -486,14 +486,14 @@
             <div class="md:col-span-8 flex flex-col justify-center reveal">
                 <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
                 <p class="font-mono text-xl leading-relaxed mb-6">
-                    I am Batur Unlu. A <span class="bg-neo-yellow px-1 border border-black">2021 Tokyo Olympian</span> turned Software Engineer — I apply the same discipline from elite sport to building secure, high-scale software systems.
+                    I am Batur Unlu. A <span class="bg-neo-yellow px-1 border border-black">2021 Tokyo Olympian</span> turned Software Engineer — specializing in authentication, SSO, and identity-access platforms for multi-tenant SaaS.
                 </p>
                 <p class="font-mono text-lg mb-4 text-gray-600 border-l-4 border-neo-purple pl-4">
-                    > Specialized in authentication, SSO & identity-access platforms.<br>
-                    > Engineering SaaS microservices for multi-tenant enterprise ecosystems.<br>
-                    > Distributed auth & access infra serving 100K+ users across 5 global regions.<br>
-                    > 19M+ monthly API calls · OAuth · Okta · Redis · LaunchDarkly.<br>
-                    > Georgia Tech CS grad · AI & Media concentration.
+                    > Building secure, high-scale infrastructure supporting 100K+ global users.<br>
+                    > Authentication, SSO & identity-access platforms across NCR's enterprise ecosystem.<br>
+                    > Distributed auth & access infra — 19M monthly API calls · OAuth · Okta · Redis.<br>
+                    > LaunchDarkly · AWS · Docker · Kubernetes · SonarQube · JIRA.<br>
+                    > Georgia Tech CS — AI & Media concentration · U.S. Permanent Resident.
                 </p>
 
                 <div class="flex flex-wrap gap-3 mt-8">
@@ -609,10 +609,20 @@
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Databricks</div>
                 </div>
 
+                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ QUALITY</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">SonarQube</div>
+                </div>
+
+                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                    <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ AGILE</div>
+                    <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">JIRA</div>
+                </div>
+
             </div>
 
             <div class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500">
-                <span>TOTAL_NODES: 16</span>
+                <span>TOTAL_NODES: 18</span>
                 <span>MEMORY_USAGE: 128MB</span>
             </div>
 
@@ -636,10 +646,11 @@
                     </div>
                     <p class="font-mono text-xl mb-4 text-neo-orange font-bold">@ NCR VOYIX · Atlanta, GA</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
-                        <li>Built & scaled NCR's central SaaS entry platform and shared React component library, adopted by 20+ teams across 30+ products.</li>
-                        <li>Engineered distributed auth & access microservices in C#, .NET & Okta — supporting OAuth flows for 100K+ users and 19M monthly calls across 5 global regions.</li>
-                        <li>Implemented platform-wide MFA (email, SMS, custom authenticator, Okta step-up flows) via LaunchDarkly.</li>
-                        <li>Reduced authentication latency by <b>75%</b> (200ms → 50ms) with a distributed Redis cache for token introspection across 50K+ weekly requests.</li>
+                        <li>Built shared platform components and services for NCR's multi-tenant SaaS ecosystem, standardizing authentication, organization context, and navigation across <b>30+ applications</b> used by <b>20+ teams</b>.</li>
+                        <li>Engineered authentication and access control services in C#, .NET, and Okta, supporting OAuth flows and secure API traffic for <b>100K+ users</b> and <b>19M monthly requests</b> across five global regions.</li>
+                        <li>Implemented platform-wide MFA using Okta step-up authentication and LaunchDarkly feature flags, enabling email, SMS, and authenticator-based verification across enterprise applications.</li>
+                        <li>Reduced token introspection latency by <b>75%</b> (200ms → 50ms) by designing a distributed Redis caching layer, improving performance across <b>50K+ weekly</b> authentication requests.</li>
+                        <li>Contributed to a partner-facing API gateway and provisioning platform (Cloud Connect), enabling secure third-party integrations and real-time provisioning via distributed system workflows.</li>
                     </ul>
                 </div>
             </div>
@@ -654,10 +665,8 @@
                     </div>
                     <p class="font-mono text-xl mb-4 text-neo-blue font-bold">@ NCR VOYIX · Atlanta, GA</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
-                        <li>Integrated OAuth, existing mapping, and ordering functionalities into NCR OCP Marketplace — improved user integration by <b>30%</b>.</li>
-                        <li>Developed & tested NCR Site API and Google API — increased site management efficiency by <b>25%</b>.</li>
-                        <li>Designed acceptance criteria for site address search, pagination, and error handling — boosted user satisfaction by <b>15%</b>.</li>
-                        <li>Launched Google Business Profile integration (Angular, TypeScript, C#, .NET) for 5,000+ SMBs — cut manual setup by <b>60%</b>, onboarding time by <b>40%</b>.</li>
+                        <li>Expanded NCR Marketplace to <b>5,000+ SMBs</b> by launching Google Business Profile in Angular, TypeScript, C#, and .NET with OAuth data flows for location syncing and claim mapping, cutting setup time by <b>60%</b>.</li>
+                        <li>Cut partner onboarding time by <b>40%</b> by delivering microservices-compatible data-migration workflows across the full SDLC, collaborating in Agile sprints and documenting integration requirements end-to-end.</li>
                     </ul>
                 </div>
             </div>
@@ -674,9 +683,8 @@
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
                         <li>Led team to build an ML-powered chatbot — improved customer query resolution efficiency by <b>40%</b>.</li>
                         <li>Used Databricks for model tuning & deployment — enhanced model accuracy by <b>15%</b>.</li>
-                        <li>Employed Microsoft Azure for data storage & retrieval — streamlined data processing by <b>20%</b>.</li>
-                        <li>Enhanced chatbot search with Dolly Model & MosaicML — improved client search results by <b>25%</b>.</li>
-                        <li>Led development of reusable claims-portal template (Angular, TypeScript, SCSS) for UPS channel partners including Pirate Ship.</li>
+                        <li>Reduced internal query resolution time for operations teams by building a full-stack AI chatbot on Databricks with Streamlit, OpenAI's MosaicML, and PyTorch, documenting system protocols for technical stakeholders.</li>
+                        <li>Accelerated 3PL integration including Pirate Ship by leading component-based development of a microservices-ready claims-portal template in Angular, TypeScript, and SCSS that decoupled frontend from backend service logic.</li>
                     </ul>
                 </div>
             </div>
@@ -701,24 +709,8 @@
                     <p class="font-mono text-xl mb-4 text-neo-orange font-bold">@ GEORGIA INSTITUTE OF TECHNOLOGY · Atlanta, GA</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
                         <li>Concentration: <b>Artificial Intelligence & Media</b></li>
-                        <li>NCAA Division I Student-Athlete — Georgia Tech Men's Swimming (full scholarship).</li>
-                        <li>Qualified for the <b>2020 Tokyo Olympics</b>.</li>
-                        <li>All Academic American · All ACC Athlete · <b>Fred Lanoue Athletic Achievement Award</b>.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="reveal relative pl-8 md:pl-16">
-                <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-blue border-4 border-black"></div>
-                <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
-                        <h3 class="text-3xl font-black uppercase">High School Diploma</h3>
-                        <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">2016 – 2020</span>
-                    </div>
-                    <p class="font-mono text-xl mb-4 text-neo-blue font-bold">@ PEV SCIENCE HIGH SCHOOL · Istanbul, Türkiye</p>
-                    <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
-                        <li>Graduated from honors class with a <b>3.89 GPA</b>.</li>
-                        <li>Completed advanced science courses in preparation for US college admissions.</li>
+                        <li>NCAA D1 Georgia Tech Swimming Student-Athlete — All American · <b>Fred Lanoue Athletic Achievement Award</b>.</li>
+                        <li>Qualified for the <b>2021 Tokyo Japan Olympic Games</b>.</li>
                     </ul>
                 </div>
             </div>
