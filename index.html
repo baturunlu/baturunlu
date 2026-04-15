@@ -754,12 +754,12 @@
                             <div class="flex items-center gap-3">
                                 <i class="ri-github-fill text-3xl text-neo-green"></i>
                                 <div>
-                                    <h4 class="text-xl font-black text-white leading-tight">bu185015_ncrvoyix</h4>
-                                    <p class="text-[10px] font-mono text-neo-green uppercase tracking-widest">NCR Voyix Enterprise</p>
+                                    <h4 class="text-xl font-black text-white leading-tight">batur_unlu</h4>
+                                    <p class="text-[10px] font-mono text-neo-green uppercase tracking-widest">Personal</p>
                                 </div>
                             </div>
                             <div class="text-right">
-                                <div class="text-2xl font-black text-neo-green tracking-tighter">965</div>
+                                <div class="text-2xl font-black text-neo-green tracking-tighter">382</div>
                                 <p class="text-[8px] font-mono text-gray-500 uppercase">Contributions / yr</p>
                             </div>
                         </div>
@@ -784,7 +784,7 @@
                         <div class="flex-1 flex flex-col justify-center mb-6">
                             <div class="bg-neo-black border-2 border-neo-green/30 p-3 hover:border-neo-green transition-colors duration-500 relative">
                                 <div class="absolute top-2 right-2 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse"></div>
-                                <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-2">Contribution_Graph // 965 total</p>
+                                <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-2">Contribution_Graph // 382 total</p>
                                 <div id="contrib-graph" class="flex gap-[3px] overflow-hidden"></div>
                                 <div class="flex items-center gap-2 mt-2 justify-end">
                                     <span class="text-[8px] font-mono text-gray-600">Less</span>
@@ -802,7 +802,7 @@
                             <div class="flex items-center justify-between text-neo-green p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
                                 <div class="flex items-center gap-2">
                                     <span class="text-white/30">$</span>
-                                    <span class="text-neo-green">@bu185015_ncrvoyix</span>
+                                    <span class="text-neo-green">@batur_unlu</span>
                                     <span class="animate-pulse">_</span>
                                 </div>
                                 <a href="https://www.linkedin.com/in/baturalp-unlu" target="_blank"
@@ -1306,17 +1306,17 @@
 
             const WEEKS = 52;
             const DAYS = 7;
-            const TARGET = 901;
+            const TARGET = 382;
 
 
-            // Generate weights per week (simulate realistic bursts)
+            // Generate weights per week (personal account — lighter, more irregular)
             const weekWeights = [];
             for (let w = 0; w < WEEKS; w++) {
-                // Holiday dip around week 39-41 (Dec), high activity Jan-Feb (weeks 45-52)
-                if (w >= 39 && w <= 41) weekWeights.push(0.2);       // Dec holiday
-                else if (w >= 45) weekWeights.push(1.4);              // Jan–Feb 2026 very active
-                else if (w >= 10 && w <= 20) weekWeights.push(1.1);   // mid-year active
-                else weekWeights.push(0.85);
+                // Dec holiday dip, mild Jan-Feb bump, otherwise sparse
+                if (w >= 39 && w <= 41) weekWeights.push(0.05);      // Dec holiday — almost nothing
+                else if (w >= 45) weekWeights.push(0.7);              // Jan–Feb 2026 slight uptick
+                else if (w >= 10 && w <= 20) weekWeights.push(0.55);  // mid-year moderate
+                else weekWeights.push(0.35);
             }
 
             // Build raw cell values
@@ -1326,11 +1326,19 @@
                 const col = [];
                 for (let d = 0; d < DAYS; d++) {
                     const isWeekend = d === 0 || d === 6;
-                    if (isWeekend) { col.push(0); continue; }
+                    // weekends mostly empty for personal account
+                    if (isWeekend) {
+                        const r2 = Math.abs(Math.sin(w * 5 + d * 17 + 99) * 10000) % 1;
+                        const val = r2 > 0.8 ? r2 * 1.5 : 0;
+                        col.push(val);
+                        total += val;
+                        continue;
+                    }
                     const base = 1.0;
                     // pseudo-random but deterministic
                     const r = Math.abs(Math.sin(w * 7 + d * 13 + 42) * 10000) % 1;
-                    const raw = base * weekWeights[w] * (r > 0.25 ? r * 6 : 0);
+                    // higher empty threshold — personal account skips many days
+                    const raw = base * weekWeights[w] * (r > 0.48 ? r * 4 : 0);
                     col.push(raw);
                     total += raw;
                 }
