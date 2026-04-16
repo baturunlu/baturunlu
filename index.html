@@ -900,8 +900,42 @@
                 <!-- Sports Performance Intelligence Platform -->
                 <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
                     <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
-                        <img src="Assets/images/sports.png" alt="Sports Performance Intelligence Platform by Baturalp Unlu"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        <!-- SVG: Bar chart / athlete data viz -->
+                        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="640" height="360" fill="#0a0a0a"/>
+                            <!-- grid lines -->
+                            <line x1="60" y1="20" x2="60" y2="300" stroke="#1a1a1a" stroke-width="1"/>
+                            <line x1="60" y1="300" x2="620" y2="300" stroke="#1a1a1a" stroke-width="1"/>
+                            <line x1="60" y1="230" x2="620" y2="230" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
+                            <line x1="60" y1="160" x2="620" y2="160" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
+                            <line x1="60" y1="90" x2="620" y2="90" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
+                            <!-- bars -->
+                            <rect x="80"  y="180" width="38" height="120" fill="#33ff57" opacity="0.85"/>
+                            <rect x="140" y="140" width="38" height="160" fill="#33ff57" opacity="0.85"/>
+                            <rect x="200" y="100" width="38" height="200" fill="#33ff57" opacity="0.85"/>
+                            <rect x="260" y="120" width="38" height="180" fill="#33ff57" opacity="0.85"/>
+                            <rect x="320" y="80"  width="38" height="220" fill="#33ff57" opacity="0.85"/>
+                            <rect x="380" y="60"  width="38" height="240" fill="#fff"    opacity="0.9"/>
+                            <rect x="440" y="90"  width="38" height="210" fill="#33ff57" opacity="0.85"/>
+                            <rect x="500" y="110" width="38" height="190" fill="#33ff57" opacity="0.85"/>
+                            <rect x="560" y="70"  width="38" height="230" fill="#33ff57" opacity="0.85"/>
+                            <!-- trend line -->
+                            <polyline points="99,195 159,155 219,115 279,135 339,95 399,75 459,105 519,125 579,85"
+                                fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6,3" opacity="0.5"/>
+                            <!-- labels -->
+                            <text x="30" y="304" fill="#444" font-size="10" font-family="monospace">0</text>
+                            <text x="30" y="234" fill="#444" font-size="10" font-family="monospace">25</text>
+                            <text x="30" y="164" fill="#444" font-size="10" font-family="monospace">50</text>
+                            <text x="30" y="94"  fill="#444" font-size="10" font-family="monospace">75</text>
+                            <text x="16" y="344" fill="#33ff57" font-size="9" font-family="monospace">SWIM_VELOCITY.csv</text>
+                            <text x="480" y="344" fill="#555" font-size="9" font-family="monospace">GT_SWIM // 9 athletes</text>
+                            <!-- title -->
+                            <text x="60" y="16" fill="#33ff57" font-size="11" font-family="monospace" font-weight="bold">PERFORMANCE_ANALYTICS &gt; live_feed</text>
+                            <!-- pulse dot -->
+                            <circle cx="622" cy="12" r="5" fill="#33ff57" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.4s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -925,8 +959,44 @@
                 <!-- Stock Market Predictor -->
                 <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
                     <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
-                        <img src="Assets/images/stoceasy.png" alt="Stock Market Predictor by Baturalp Unlu"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        <!-- SVG: candlestick chart -->
+                        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="640" height="360" fill="#0a0a0a"/>
+                            <!-- grid -->
+                            <line x1="60" y1="20" x2="60" y2="310" stroke="#1a1a1a" stroke-width="1"/>
+                            <line x1="60" y1="310" x2="630" y2="310" stroke="#1a1a1a" stroke-width="1"/>
+                            <line x1="60" y1="240" x2="630" y2="240" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,5"/>
+                            <line x1="60" y1="170" x2="630" y2="170" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,5"/>
+                            <line x1="60" y1="100" x2="630" y2="100" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,5"/>
+                            <!-- candles: wick then body. green=up, red=down -->
+                            <!-- c1 up -->  <line x1="88"  y1="200" x2="88"  y2="260" stroke="#33ff57" stroke-width="1.5"/><rect x="82"  y="215" width="12" height="35" fill="#33ff57"/>
+                            <!-- c2 up -->  <line x1="128" y1="170" x2="128" y2="230" stroke="#33ff57" stroke-width="1.5"/><rect x="122" y="185" width="12" height="35" fill="#33ff57"/>
+                            <!-- c3 dn -->  <line x1="168" y1="155" x2="168" y2="215" stroke="#ff4d6d" stroke-width="1.5"/><rect x="162" y="165" width="12" height="35" fill="#ff4d6d"/>
+                            <!-- c4 up -->  <line x1="208" y1="130" x2="208" y2="195" stroke="#33ff57" stroke-width="1.5"/><rect x="202" y="145" width="12" height="38" fill="#33ff57"/>
+                            <!-- c5 dn -->  <line x1="248" y1="140" x2="248" y2="200" stroke="#ff4d6d" stroke-width="1.5"/><rect x="242" y="150" width="12" height="32" fill="#ff4d6d"/>
+                            <!-- c6 up -->  <line x1="288" y1="100" x2="288" y2="165" stroke="#33ff57" stroke-width="1.5"/><rect x="282" y="115" width="12" height="38" fill="#33ff57"/>
+                            <!-- c7 up -->  <line x1="328" y1="80"  x2="328" y2="145" stroke="#33ff57" stroke-width="1.5"/><rect x="322" y="95"  width="12" height="36" fill="#33ff57"/>
+                            <!-- c8 dn -->  <line x1="368" y1="90"  x2="368" y2="150" stroke="#ff4d6d" stroke-width="1.5"/><rect x="362" y="100" width="12" height="32" fill="#ff4d6d"/>
+                            <!-- c9 up -->  <line x1="408" y1="65"  x2="408" y2="130" stroke="#33ff57" stroke-width="1.5"/><rect x="402" y="80"  width="12" height="36" fill="#33ff57"/>
+                            <!-- c10 dn --> <line x1="448" y1="70"  x2="448" y2="135" stroke="#ff4d6d" stroke-width="1.5"/><rect x="442" y="82"  width="12" height="30" fill="#ff4d6d"/>
+                            <!-- c11 up --> <line x1="488" y1="50"  x2="488" y2="115" stroke="#33ff57" stroke-width="1.5"/><rect x="482" y="65"  width="12" height="36" fill="#33ff57"/>
+                            <!-- c12 up --> <line x1="528" y1="38"  x2="528" y2="100" stroke="#33ff57" stroke-width="1.5"/><rect x="522" y="50"  width="12" height="35" fill="#33ff57"/>
+                            <!-- prediction dashed line -->
+                            <polyline points="534,67 570,42 610,28" fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.6"/>
+                            <circle cx="610" cy="28" r="4" fill="#fff" opacity="0.7"/>
+                            <text x="570" y="22" fill="#fff" font-size="9" font-family="monospace" opacity="0.7">PREDICTED</text>
+                            <!-- axis labels -->
+                            <text x="16" y="314" fill="#444" font-size="10" font-family="monospace">0</text>
+                            <text x="16" y="244" fill="#444" font-size="10" font-family="monospace">50</text>
+                            <text x="8"  y="174" fill="#444" font-size="10" font-family="monospace">100</text>
+                            <text x="8"  y="104" fill="#444" font-size="10" font-family="monospace">150</text>
+                            <text x="16" y="350" fill="#3b9eff" font-size="9" font-family="monospace">STOCK_PRED.py &gt; SVM+CNN</text>
+                            <text x="460" y="350" fill="#555" font-size="9" font-family="monospace">accuracy: 78.4%</text>
+                            <text x="60"  y="16"  fill="#3b9eff" font-size="11" font-family="monospace" font-weight="bold">MARKET_PREDICTOR &gt; live_feed</text>
+                            <circle cx="622" cy="12" r="5" fill="#3b9eff" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.6s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -949,8 +1019,68 @@
                 <!-- EZ Park -->
                 <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
                     <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
-                        <img src="Assets/images/ez_parking.jpg" alt="EZ Park Smart Parking Solution by Baturalp Unlu"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        <!-- SVG: parking map grid -->
+                        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="640" height="360" fill="#0a0a0a"/>
+                            <!-- roads -->
+                            <rect x="0"   y="155" width="640" height="50" fill="#111"/>
+                            <rect x="290" y="0"   width="60"  height="360" fill="#111"/>
+                            <!-- lane dashes -->
+                            <line x1="0" y1="180" x2="640" y2="180" stroke="#333" stroke-width="1.5" stroke-dasharray="18,10"/>
+                            <line x1="320" y1="0" x2="320" y2="360" stroke="#333" stroke-width="1.5" stroke-dasharray="18,10"/>
+                            <!-- parking spots top-left -->
+                            <rect x="20"  y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="80"  y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="140" y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="200" y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="20"  y="58"  width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="80"  y="58"  width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="140" y="58"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="200" y="58"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="20"  y="96"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="80"  y="96"  width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="140" y="96"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="200" y="96"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <!-- parking spots top-right -->
+                            <rect x="360" y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="420" y="20"  width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="480" y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="540" y="20"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="360" y="58"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="420" y="58"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="480" y="58"  width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="540" y="58"  width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <!-- parking spots bottom -->
+                            <rect x="20"  y="218" width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="80"  y="218" width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="140" y="218" width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="200" y="218" width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="360" y="218" width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="420" y="218" width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="480" y="218" width="50" height="28" fill="none" stroke="#ff6b35" stroke-width="2"/>
+                            <rect x="540" y="218" width="50" height="28" fill="#ff6b35" opacity="0.15" stroke="#ff6b35" stroke-width="2"/>
+                            <!-- available pin -->
+                            <circle cx="165" cy="34"  r="6" fill="#33ff57"/>
+                            <text x="158" y="37" fill="#000" font-size="7" font-family="monospace" font-weight="bold">P</text>
+                            <circle cx="45"  cy="232" r="6" fill="#33ff57"/>
+                            <text x="38"  y="235" fill="#000" font-size="7" font-family="monospace" font-weight="bold">P</text>
+                            <!-- occupied X -->
+                            <text x="84"  y="76"  fill="#ff4d6d" font-size="12" font-family="monospace" font-weight="bold">✕</text>
+                            <text x="144" y="76"  fill="#ff4d6d" font-size="12" font-family="monospace" font-weight="bold">✕</text>
+                            <text x="424" y="38"  fill="#ff4d6d" font-size="12" font-family="monospace" font-weight="bold">✕</text>
+                            <text x="484" y="76"  fill="#ff4d6d" font-size="12" font-family="monospace" font-weight="bold">✕</text>
+                            <text x="144" y="236" fill="#ff4d6d" font-size="12" font-family="monospace" font-weight="bold">✕</text>
+                            <text x="544" y="236" fill="#ff4d6d" font-size="12" font-family="monospace" font-weight="bold">✕</text>
+                            <!-- legend -->
+                            <circle cx="20" cy="330" r="5" fill="#33ff57"/>
+                            <text x="30" y="334" fill="#33ff57" font-size="9" font-family="monospace">Available</text>
+                            <text x="100" y="334" fill="#ff4d6d" font-size="9" font-family="monospace">✕ Occupied</text>
+                            <text x="380" y="334" fill="#ff6b35" font-size="9" font-family="monospace">EZ_PARK &gt; real_time_map</text>
+                            <text x="60"  y="16"  fill="#ff6b35" font-size="11" font-family="monospace" font-weight="bold">EZ_PARK &gt; availability_feed</text>
+                            <circle cx="622" cy="12" r="5" fill="#ff6b35" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.2s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -971,8 +1101,50 @@
 
                 <!-- Campus Discovery App -->
                 <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
-                    <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <span class="font-black text-neo-pink text-4xl opacity-30 select-none">CAMPUS.exe</span>
+                    <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                        <!-- SVG: terminal with event feed -->
+                        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="640" height="360" fill="#0a0a0a"/>
+                            <!-- terminal window chrome -->
+                            <rect x="20" y="20" width="600" height="320" rx="4" fill="#0f0f0f" stroke="#222" stroke-width="2"/>
+                            <rect x="20" y="20" width="600" height="28" rx="4" fill="#1a1a1a"/>
+                            <circle cx="40" cy="34" r="5" fill="#ff5f57"/>
+                            <circle cx="58" cy="34" r="5" fill="#ffbd2e"/>
+                            <circle cx="76" cy="34" r="5" fill="#28c840"/>
+                            <text x="200" y="38" fill="#555" font-size="10" font-family="monospace" text-anchor="middle">campus_discovery — bash</text>
+                            <!-- terminal lines -->
+                            <text x="36" y="72"  fill="#f472b6" font-size="11" font-family="monospace">$ ./campus_api --fetch events --location GT</text>
+                            <text x="36" y="94"  fill="#555"    font-size="10" font-family="monospace">Connecting to location services...</text>
+                            <text x="36" y="112" fill="#28c840" font-size="10" font-family="monospace">✓ GPS lock acquired  [33.7756° N, 84.3963° W]</text>
+                            <text x="36" y="130" fill="#28c840" font-size="10" font-family="monospace">✓ Auth token valid   [Bearer eyJ...]</text>
+                            <text x="36" y="148" fill="#555"    font-size="10" font-family="monospace">Fetching nearby events...</text>
+                            <!-- event rows -->
+                            <rect x="36" y="158" width="568" height="22" fill="#1a1a1a" rx="2"/>
+                            <text x="44" y="173" fill="#f472b6" font-size="10" font-family="monospace">EVENT</text>
+                            <text x="100" y="173" fill="#fff" font-size="10" font-family="monospace">Hack-GT XII</text>
+                            <text x="280" y="173" fill="#555" font-size="10" font-family="monospace">Klaus 1116</text>
+                            <text x="420" y="173" fill="#28c840" font-size="10" font-family="monospace">0.3mi · OPEN</text>
+                            <rect x="36" y="184" width="568" height="22" fill="#0f0f0f" rx="2"/>
+                            <text x="44" y="199" fill="#f472b6" font-size="10" font-family="monospace">EVENT</text>
+                            <text x="100" y="199" fill="#fff" font-size="10" font-family="monospace">GT Swim Practice</text>
+                            <text x="280" y="199" fill="#555" font-size="10" font-family="monospace">CRC Pool</text>
+                            <text x="420" y="199" fill="#28c840" font-size="10" font-family="monospace">0.1mi · OPEN</text>
+                            <rect x="36" y="210" width="568" height="22" fill="#1a1a1a" rx="2"/>
+                            <text x="44" y="225" fill="#f472b6" font-size="10" font-family="monospace">EVENT</text>
+                            <text x="100" y="225" fill="#fff" font-size="10" font-family="monospace">CS Career Fair</text>
+                            <text x="280" y="225" fill="#555" font-size="10" font-family="monospace">Student Center</text>
+                            <text x="420" y="225" fill="#ffbd2e" font-size="10" font-family="monospace">0.5mi · FULL</text>
+                            <rect x="36" y="236" width="568" height="22" fill="#0f0f0f" rx="2"/>
+                            <text x="44" y="251" fill="#f472b6" font-size="10" font-family="monospace">EVENT</text>
+                            <text x="100" y="251" fill="#fff" font-size="10" font-family="monospace">Robotics Club Demo</text>
+                            <text x="280" y="251" fill="#555" font-size="10" font-family="monospace">MRDC 201</text>
+                            <text x="420" y="251" fill="#28c840" font-size="10" font-family="monospace">0.7mi · OPEN</text>
+                            <!-- prompt -->
+                            <text x="36" y="300" fill="#f472b6" font-size="11" font-family="monospace">$ <tspan fill="#fff">_</tspan>
+                                <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+                            </text>
+                            <text x="400" y="330" fill="#333" font-size="9" font-family="monospace">CAMPUS_DISCOVERY // C + MySQL + Android</text>
+                        </svg>
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -995,8 +1167,73 @@
                 <!-- Personal Finance App -->
                 <article class="reveal group bg-white border-4 border-black p-4 shadow-hard">
                     <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
-                        <img src="Assets/images/stoceasy.png" alt="Personal Finance Management App by Baturalp Unlu"
-                            class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity">
+                        <!-- SVG: donut chart + transaction list -->
+                        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="640" height="360" fill="#0a0a0a"/>
+                            <!-- donut chart segments (SVG stroke-dasharray trick) -->
+                            <!-- total circumference of r=90 circle = ~565 -->
+                            <circle cx="190" cy="185" r="90" fill="none" stroke="#1a1a1a" stroke-width="36"/>
+                            <!-- Housing 32% = 181 -->
+                            <circle cx="190" cy="185" r="90" fill="none" stroke="#a855f7" stroke-width="36"
+                                stroke-dasharray="181 384" stroke-dashoffset="0" transform="rotate(-90 190 185)"/>
+                            <!-- Food 22% = 124 -->
+                            <circle cx="190" cy="185" r="90" fill="none" stroke="#3b9eff" stroke-width="36"
+                                stroke-dasharray="124 441" stroke-dashoffset="-181" transform="rotate(-90 190 185)"/>
+                            <!-- Transport 18% = 102 -->
+                            <circle cx="190" cy="185" r="90" fill="none" stroke="#33ff57" stroke-width="36"
+                                stroke-dasharray="102 463" stroke-dashoffset="-305" transform="rotate(-90 190 185)"/>
+                            <!-- Entertainment 15% = 85 -->
+                            <circle cx="190" cy="185" r="90" fill="none" stroke="#ff6b35" stroke-width="36"
+                                stroke-dasharray="85 480" stroke-dashoffset="-407" transform="rotate(-90 190 185)"/>
+                            <!-- Savings 13% = 73 -->
+                            <circle cx="190" cy="185" r="90" fill="none" stroke="#ffbd2e" stroke-width="36"
+                                stroke-dasharray="73 492" stroke-dashoffset="-492" transform="rotate(-90 190 185)"/>
+                            <!-- center label -->
+                            <text x="190" y="179" fill="#fff" font-size="22" font-family="monospace" font-weight="bold" text-anchor="middle">$4,280</text>
+                            <text x="190" y="198" fill="#555" font-size="10" font-family="monospace" text-anchor="middle">Monthly</text>
+                            <!-- legend -->
+                            <rect x="22" y="316" width="10" height="10" fill="#a855f7"/>
+                            <text x="36" y="325" fill="#aaa" font-size="9" font-family="monospace">Housing 32%</text>
+                            <rect x="120" y="316" width="10" height="10" fill="#3b9eff"/>
+                            <text x="134" y="325" fill="#aaa" font-size="9" font-family="monospace">Food 22%</text>
+                            <rect x="210" y="316" width="10" height="10" fill="#33ff57"/>
+                            <text x="224" y="325" fill="#aaa" font-size="9" font-family="monospace">Transport 18%</text>
+                            <rect x="330" y="316" width="10" height="10" fill="#ff6b35"/>
+                            <text x="344" y="325" fill="#aaa" font-size="9" font-family="monospace">Entertain 15%</text>
+                            <rect x="440" y="316" width="10" height="10" fill="#ffbd2e"/>
+                            <text x="454" y="325" fill="#aaa" font-size="9" font-family="monospace">Savings 13%</text>
+                            <!-- transaction list -->
+                            <text x="340" y="42" fill="#a855f7" font-size="11" font-family="monospace" font-weight="bold">RECENT_TRANSACTIONS</text>
+                            <line x1="340" y1="48" x2="620" y2="48" stroke="#222" stroke-width="1"/>
+                            <!-- rows -->
+                            <text x="340" y="70"  fill="#555" font-size="9" font-family="monospace">Apr 14</text>
+                            <text x="385" y="70"  fill="#fff" font-size="9" font-family="monospace">Whole Foods</text>
+                            <text x="560" y="70"  fill="#ff4d6d" font-size="9" font-family="monospace">-$63.20</text>
+                            <text x="340" y="92"  fill="#555" font-size="9" font-family="monospace">Apr 13</text>
+                            <text x="385" y="92"  fill="#fff" font-size="9" font-family="monospace">Netflix</text>
+                            <text x="560" y="92"  fill="#ff4d6d" font-size="9" font-family="monospace">-$15.99</text>
+                            <text x="340" y="114" fill="#555" font-size="9" font-family="monospace">Apr 12</text>
+                            <text x="385" y="114" fill="#fff" font-size="9" font-family="monospace">Salary Deposit</text>
+                            <text x="555" y="114" fill="#33ff57" font-size="9" font-family="monospace">+$3,200</text>
+                            <text x="340" y="136" fill="#555" font-size="9" font-family="monospace">Apr 11</text>
+                            <text x="385" y="136" fill="#fff" font-size="9" font-family="monospace">MARTA Transit</text>
+                            <text x="560" y="136" fill="#ff4d6d" font-size="9" font-family="monospace">-$4.50</text>
+                            <text x="340" y="158" fill="#555" font-size="9" font-family="monospace">Apr 10</text>
+                            <text x="385" y="158" fill="#fff" font-size="9" font-family="monospace">Rent (Plaid ACH)</text>
+                            <text x="548" y="158" fill="#ff4d6d" font-size="9" font-family="monospace">-$1,350</text>
+                            <line x1="340" y1="166" x2="620" y2="166" stroke="#222" stroke-width="1"/>
+                            <!-- mini sparkline -->
+                            <text x="340" y="188" fill="#a855f7" font-size="9" font-family="monospace">BALANCE_30D</text>
+                            <polyline points="340,240 365,230 390,235 415,215 440,220 465,200 490,210 515,195 540,185 565,175 590,165 615,155"
+                                fill="none" stroke="#a855f7" stroke-width="2"/>
+                            <circle cx="615" cy="155" r="3" fill="#a855f7"/>
+                            <line x1="340" y1="248" x2="620" y2="248" stroke="#1a1a1a" stroke-width="1"/>
+                            <!-- header -->
+                            <text x="22" y="16" fill="#a855f7" font-size="11" font-family="monospace" font-weight="bold">FINANCE_TRACKER &gt; dashboard</text>
+                            <circle cx="622" cy="12" r="5" fill="#a855f7" opacity="0.9">
+                                <animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.8s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
@@ -1019,8 +1256,53 @@
 
                 <!-- AI Chatbot @ UPS -->
                 <article class="reveal group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
-                    <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all flex items-center justify-center">
-                        <span class="font-black text-neo-orange text-4xl opacity-30 select-none">BOT.exe</span>
+                    <div class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                        <!-- SVG: LLM chat interface -->
+                        <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                            <rect width="640" height="360" fill="#0a0a0a"/>
+                            <!-- header bar -->
+                            <rect x="0" y="0" width="640" height="38" fill="#111"/>
+                            <circle cx="22" cy="19" r="9" fill="#ff6b35" opacity="0.9"/>
+                            <text x="34" y="23" fill="#ff6b35" font-size="9" font-family="monospace" font-weight="bold">AI</text>
+                            <text x="54" y="23" fill="#fff" font-size="11" font-family="monospace" font-weight="bold">UPS_Capital_Bot</text>
+                            <text x="440" y="23" fill="#555" font-size="9" font-family="monospace">Databricks · MosaicML · PyTorch</text>
+                            <circle cx="628" cy="19" r="5" fill="#33ff57">
+                                <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+                            </circle>
+                            <!-- user bubble 1 -->
+                            <rect x="300" y="52" width="320" height="36" rx="6" fill="#1a1a2e"/>
+                            <text x="315" y="68" fill="#3b9eff" font-size="10" font-family="monospace">USER</text>
+                            <text x="355" y="68" fill="#ddd" font-size="10" font-family="monospace">What's the claim status for order #8821?</text>
+                            <text x="590" y="82" fill="#333" font-size="8" font-family="monospace">9:04am</text>
+                            <!-- bot bubble 1 -->
+                            <rect x="20" y="98" width="400" height="52" rx="6" fill="#1a1a1a"/>
+                            <text x="35" y="114" fill="#ff6b35" font-size="10" font-family="monospace">BOT</text>
+                            <text x="75" y="114" fill="#ddd" font-size="10" font-family="monospace">Order #8821 — Status: IN_TRANSIT</text>
+                            <text x="75" y="130" fill="#555" font-size="10" font-family="monospace">ETA: Apr 16 · Carrier: UPS Ground · Conf: 94.2%</text>
+                            <text x="35" y="144" fill="#333" font-size="8"  font-family="monospace">9:04am</text>
+                            <!-- user bubble 2 -->
+                            <rect x="260" y="162" width="360" height="36" rx="6" fill="#1a1a2e"/>
+                            <text x="275" y="178" fill="#3b9eff" font-size="10" font-family="monospace">USER</text>
+                            <text x="315" y="178" fill="#ddd" font-size="10" font-family="monospace">Summarize Q1 claim resolutions by region</text>
+                            <text x="590" y="192" fill="#333" font-size="8" font-family="monospace">9:06am</text>
+                            <!-- bot bubble 2 -->
+                            <rect x="20" y="208" width="430" height="68" rx="6" fill="#1a1a1a"/>
+                            <text x="35" y="224" fill="#ff6b35" font-size="10" font-family="monospace">BOT</text>
+                            <text x="75" y="224" fill="#ddd" font-size="10" font-family="monospace">Q1 Summary — 3,842 claims processed</text>
+                            <text x="75" y="240" fill="#33ff57" font-size="10" font-family="monospace">● APAC  +18%   ● EMEA  +11%   ● NA  +24%</text>
+                            <text x="75" y="256" fill="#555" font-size="10" font-family="monospace">Avg resolution time: 2.3d (↓ 40% vs Q4)</text>
+                            <text x="35" y="270" fill="#333" font-size="8"  font-family="monospace">9:06am</text>
+                            <!-- typing indicator -->
+                            <rect x="20" y="288" width="80" height="28" rx="6" fill="#1a1a1a"/>
+                            <circle cx="38" cy="302" r="4" fill="#555"><animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0s" repeatCount="indefinite"/></circle>
+                            <circle cx="52" cy="302" r="4" fill="#555"><animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.3s" repeatCount="indefinite"/></circle>
+                            <circle cx="66" cy="302" r="4" fill="#555"><animate attributeName="opacity" values="0.3;1;0.3" dur="1s" begin="0.6s" repeatCount="indefinite"/></circle>
+                            <!-- input bar -->
+                            <rect x="20" y="326" width="560" height="26" rx="4" fill="#111" stroke="#222" stroke-width="1"/>
+                            <text x="32" y="343" fill="#333" font-size="10" font-family="monospace">Ask anything about operations...</text>
+                            <rect x="590" y="326" width="40" height="26" rx="4" fill="#ff6b35"/>
+                            <text x="603" y="343" fill="#000" font-size="10" font-family="monospace" font-weight="bold">↑</text>
+                        </svg>
                     </div>
                     <div class="flex justify-between items-start">
                         <div>
