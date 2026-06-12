@@ -218,9 +218,11 @@
         body.dark-mode .shadow-hard { box-shadow: 4px 4px 0px 0px #3a3d6b !important; }
         body.dark-mode .shadow-hard-xl { box-shadow: 12px 12px 0px 0px #3a3d6b !important; }
         body.dark-mode section.bg-white { background-color: #13152a !important; }
-        body.dark-mode .bg-neo-yellow { background-color: #FBFF48 !important; }
+        body.dark-mode .bg-neo-yellow { background-color: #FBFF48 !important; color: #000 !important; }
+        body.dark-mode .bg-neo-yellow * { color: #000 !important; }
         body.dark-mode .text-neo-yellow { color: #FBFF48 !important; }
-        body.dark-mode .hover\:bg-neo-yellow:hover { background-color: #FBFF48 !important; }
+        body.dark-mode .hover\:bg-neo-yellow:hover { background-color: #FBFF48 !important; color: #000 !important; }
+        body.dark-mode .hover\:bg-neo-yellow:hover * { color: #000 !important; }
         body.dark-mode nav .bg-neo-white { background-color: #13152a !important; }
         body.dark-mode nav a { color: #e8e6ff !important; }
         body.dark-mode #mobile-menu .bg-white { background-color: #13152a !important; }
@@ -246,7 +248,8 @@
         body.dark-mode .text-neo-pink { color: #f472b6 !important; }
         body.dark-mode .text-neo-green { color: #4ade80 !important; }
         /* group-hover text color fix in dark mode */
-        body.dark-mode .group:hover .group-hover\:text-black { color: #0d0f1a !important; }
+        body.dark-mode .group:hover .group-hover\:text-black { color: #000 !important; }
+        body.dark-mode .group:hover .group-hover\:text-neo-yellow { color: #000 !important; }
 
         * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
  
@@ -523,7 +526,7 @@
                     class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
                     VIEW DATABASE
                 </a>
-                <a href="Assets/Resume/Batur unlu Full Time 2025.pdf" download
+                <a href="Assets/Resume/batur_unlu_resume_06.pdf" download
                     class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
                     <i class="ri-download-line"></i> RESUME
                 </a>
