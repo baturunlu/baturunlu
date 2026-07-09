@@ -310,6 +310,78 @@
             }
         }
 
+        /* Global Scrollbar — neo-brutalist */
+        /* transparent track shows the <html> background, so keep it synced with the theme */
+        html {
+            background-color: #f5f0e8;
+            scrollbar-width: auto;                     /* Firefox */
+            scrollbar-color: #ffde59 transparent;      /* Firefox: thumb track */
+        }
+        html:has(body.dark-mode) {
+            background-color: #0d0f1a;
+        }
+
+        /* Cursor ring — lagging corner brackets */
+        #cursor-ring {
+            pointer-events: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 42px;
+            height: 42px;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            background:
+                linear-gradient(#fff 0 0) left top / 13px 3px,
+                linear-gradient(#fff 0 0) left top / 3px 13px,
+                linear-gradient(#fff 0 0) right top / 13px 3px,
+                linear-gradient(#fff 0 0) right top / 3px 13px,
+                linear-gradient(#fff 0 0) left bottom / 13px 3px,
+                linear-gradient(#fff 0 0) left bottom / 3px 13px,
+                linear-gradient(#fff 0 0) right bottom / 13px 3px,
+                linear-gradient(#fff 0 0) right bottom / 3px 13px;
+            background-repeat: no-repeat;
+        }
+        ::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffde59;
+            border: 2px solid #000;
+            border-radius: 0;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #33ff57;
+        }
+        ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+
+        /* Terminal Scrollbar — neo-brutalist */
+        #terminal-output {
+            scrollbar-width: thin;                     /* Firefox */
+            scrollbar-color: #33ff57 #111;             /* Firefox: thumb track */
+        }
+        #terminal-output::-webkit-scrollbar {
+            width: 14px;
+        }
+        #terminal-output::-webkit-scrollbar-track {
+            background: #111;
+            border-left: 2px solid rgba(51, 255, 87, 0.3);
+        }
+        #terminal-output::-webkit-scrollbar-thumb {
+            background: #33ff57;
+            border: 2px solid #000;
+            border-radius: 0;
+        }
+        #terminal-output::-webkit-scrollbar-thumb:hover {
+            background: #ffde59;
+        }
+
         /* Reveal Animation */
         .reveal {
             opacity: 0;
@@ -429,6 +501,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div id="cursor" class="w-8 h-8 bg-white rounded-full border-2 border-black hidden lg:block"></div>
+    <div id="cursor-ring" class="hidden lg:block"></div>
 
     <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar" style="width: 0%">
     </div>
@@ -523,11 +596,11 @@
 
             <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
                 <a href="#projects"
-                    class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                    class="magnetic bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:shadow-none transition-colors cursor-hover">
                     VIEW DATABASE
                 </a>
                 <a href="Assets/Resume/batur_unlu_resume_07.pdf" download
-                    class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
+                    class="magnetic bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:shadow-none transition-colors cursor-hover flex items-center justify-center gap-2">
                     <i class="ri-download-line"></i> RESUME
                 </a>
             </div>
@@ -598,7 +671,7 @@
 
             <div class="flex flex-wrap justify-center md:justify-start">
 
-                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-red transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
                     <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE</div>
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">C#</div>
                 </div>
@@ -638,7 +711,7 @@
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Redis</div>
                 </div>
 
-                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
                     <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ CLOUD</div>
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GCP</div>
                 </div>
@@ -698,7 +771,7 @@
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Playwright</div>
                 </div>
 
-                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                <div class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
                     <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ VERSION</div>
                     <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Git</div>
                 </div>
@@ -1599,6 +1672,33 @@
         </div>
     </section>
 
+    <!-- INTERACTIVE TERMINAL SECTION -->
+    <section id="terminal" class="py-24 px-4 max-w-5xl mx-auto">
+        <h2 class="text-5xl md:text-7xl font-black uppercase mb-4 tracking-tighter text-center">
+            Batur<span class="text-neo-green">_Shell</span>
+        </h2>
+        <p class="font-mono text-center text-sm mb-10 text-gray-500">/// TYPE <span class="bg-neo-yellow text-black px-1 border border-black font-bold">help</span> AND HIT ENTER ///</p>
+
+        <div class="reveal border-4 border-black shadow-hard-xl bg-black overflow-hidden" id="terminal-window">
+            <!-- title bar -->
+            <div class="flex items-center gap-2 bg-neo-yellow border-b-4 border-black px-4 py-2">
+                <div class="w-4 h-4 bg-neo-red border-2 border-black rounded-full"></div>
+                <div class="w-4 h-4 bg-neo-orange border-2 border-black rounded-full"></div>
+                <div class="w-4 h-4 bg-neo-green border-2 border-black rounded-full"></div>
+                <span class="font-mono font-bold text-black text-sm ml-3">batur@baturunlu.com — bash — 80×24</span>
+            </div>
+            <!-- output -->
+            <div id="terminal-output" class="font-mono text-sm md:text-base text-neo-green p-4 h-80 overflow-y-auto whitespace-pre-wrap leading-relaxed" aria-live="polite"></div>
+            <!-- input -->
+            <div class="flex items-center gap-2 border-t-2 border-neo-green/30 px-4 py-3">
+                <span class="font-mono text-neo-green font-bold shrink-0">batur@web:~$</span>
+                <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal input"
+                    class="flex-1 bg-transparent font-mono text-white outline-none border-none caret-transparent min-w-0" />
+                <span id="terminal-cursor" class="w-2.5 h-5 bg-neo-green inline-block animate-pulse -ml-1"></span>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
         <div class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
             <div class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
@@ -2022,6 +2122,211 @@
 
             if (img.complete && img.naturalWidth > 0) setup();
             else img.addEventListener('load', setup);
+        })();
+
+        // ── Interactive Terminal ──
+        (function () {
+            const out = document.getElementById('terminal-output');
+            const input = document.getElementById('terminal-input');
+            const win = document.getElementById('terminal-window');
+            if (!out || !input || !win) return;
+
+            const history = [];
+            let histIdx = -1;
+
+            const print = (text, cls) => {
+                const line = document.createElement('div');
+                if (cls) line.className = cls;
+                line.textContent = text;
+                out.appendChild(line);
+                out.scrollTop = out.scrollHeight;
+            };
+            const printHTML = (html) => {
+                const line = document.createElement('div');
+                line.innerHTML = html;
+                out.appendChild(line);
+                out.scrollTop = out.scrollHeight;
+            };
+
+            const banner = [
+                '██████   █████  ████████ ██    ██ ██████',
+                '██   ██ ██   ██    ██    ██    ██ ██   ██',
+                '██████  ███████    ██    ██    ██ ██████',
+                '██   ██ ██   ██    ██    ██    ██ ██   ██',
+                '██████  ██   ██    ██     ██████  ██   ██',
+                '',
+                'BaturOS v2.6.0 — Olympian Kernel',
+                'Type "help" to see available commands.',
+                ''
+            ];
+
+            const commands = {
+                help: () => {
+                    print('Available commands:');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">whoami</span>      — who is this guy?');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">olympics</span>    — the Tokyo 2021 story');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">skills</span>      — print tech stack');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">experience</span>  — work history');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">resume</span>      — download resume.pdf');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">projects</span>    — jump to projects');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">contact</span>     — get in touch');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">swim</span>        — 🏊');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">theme</span>       — toggle dark mode');
+                    printHTML('&nbsp;&nbsp;<span class="text-neo-yellow">clear</span>       — clear terminal');
+                },
+                whoami: () => {
+                    print('Baturalp "Batur" Unlu');
+                    print('2021 Tokyo Olympian → Software Engineer @ NCR Voyix');
+                    print('Building multi-tenant identity & platform infra on GCP/Kubernetes.');
+                    print('Atlanta, GA · Georgia Tech CS · U.S. Permanent Resident');
+                },
+                olympics: () => {
+                    print('> Loading tokyo_2021.log ...');
+                    print('');
+                    print('🥇 Qualified for the 2021 Tokyo Olympic Games (Swimming, Türkiye 🇹🇷)');
+                    print('🏆 ACC Champion — 200 Free · Georgia Tech school record holder');
+                    print('🎓 NCAA D1 All-American · Fred Lanoue Athletic Achievement Award');
+                    print('');
+                    print('Same obsession with speed — now applied to token introspection latency.');
+                },
+                skills: () => {
+                    print('LANGUAGES   : TypeScript · JavaScript · C# · Python · SQL');
+                    print('FRONTEND    : React · Angular · HTML/CSS');
+                    print('BACKEND     : .NET · Node.js · REST · OAuth 2.0/OIDC · Okta');
+                    print('CLOUD/INFRA : GCP · Kubernetes · Helm · Docker · Terraform · GitOps');
+                    print('DATA/TEST   : Redis · PostgreSQL · Databricks · Playwright · Cypress');
+                },
+                experience: () => {
+                    print('[2025–now ] Software Engineer        @ NCR Voyix, Atlanta');
+                    print('[2024     ] Software Engineer Intern @ NCR Voyix, Atlanta');
+                    print('[2023     ] AI Engineer Co-op        @ UPS Capital, Atlanta');
+                    print('');
+                    printHTML('Full log: <a href="#experience" class="underline text-neo-yellow">/experience</a>');
+                },
+                resume: () => {
+                    print('Downloading batur_unlu_resume_07.pdf ...');
+                    const a = document.createElement('a');
+                    a.href = 'Assets/Resume/batur_unlu_resume_07.pdf';
+                    a.download = '';
+                    a.click();
+                    print('Done. Check your downloads folder.');
+                },
+                projects: () => {
+                    print('Redirecting to /projects ...');
+                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                },
+                contact: () => {
+                    printHTML('EMAIL    : <a href="mailto:unlubatu@proton.me" class="underline text-neo-yellow">unlubatu@proton.me</a>');
+                    printHTML('LINKEDIN : <a href="https://www.linkedin.com/in/baturalp-unlu" target="_blank" class="underline text-neo-yellow">linkedin.com/in/baturalp-unlu</a>');
+                    print('STATUS   : 🟢 open to opportunities');
+                },
+                swim: () => {
+                    const line = document.createElement('div');
+                    out.appendChild(line);
+                    const width = 30;
+                    let pos = 0;
+                    const iv = setInterval(() => {
+                        line.textContent = '~'.repeat(pos) + '🏊' + '~'.repeat(Math.max(0, width - pos));
+                        out.scrollTop = out.scrollHeight;
+                        if (++pos > width) {
+                            clearInterval(iv);
+                            print('New personal best: 0.9s / 30 chars. 🥇');
+                        }
+                    }, 30);
+                },
+                theme: () => {
+                    toggleDark();
+                    print('Theme toggled.');
+                },
+                clear: () => { out.innerHTML = ''; },
+                ls: () => { print('about/  skills/  experience/  projects/  contact/  tokyo_2021.log  resume.pdf'); },
+                sudo: (args) => {
+                    if (args.join(' ').includes('hire')) {
+                        print('Permission granted. ✅');
+                        printHTML('Initiating handshake: <a href="mailto:unlubatu@proton.me" class="underline text-neo-yellow">unlubatu@proton.me</a>');
+                    } else {
+                        print('batur is not in the sudoers file. This incident will be reported.');
+                    }
+                }
+            };
+
+            const run = (raw) => {
+                const cmd = raw.trim();
+                printHTML('<span class="text-white">batur@web:~$ ' + cmd.replace(/</g, '&lt;') + '</span>');
+                if (!cmd) return;
+                history.unshift(cmd);
+                histIdx = -1;
+                const [name, ...args] = cmd.toLowerCase().split(/\s+/);
+                if (commands[name]) commands[name](args);
+                else print(`bash: ${name}: command not found — try "help"`, 'text-neo-red');
+                out.scrollTop = out.scrollHeight;
+            };
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') { run(input.value); input.value = ''; }
+                else if (e.key === 'ArrowUp') { e.preventDefault(); if (histIdx < history.length - 1) input.value = history[++histIdx]; }
+                else if (e.key === 'ArrowDown') { e.preventDefault(); input.value = histIdx > 0 ? history[--histIdx] : (histIdx = -1, ''); }
+            });
+            win.addEventListener('click', () => input.focus());
+
+            // boot banner types in when scrolled into view
+            let booted = false;
+            new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !booted) {
+                    booted = true;
+                    let i = 0;
+                    const iv = setInterval(() => {
+                        print(banner[i]);
+                        if (++i >= banner.length) clearInterval(iv);
+                    }, 90);
+                }
+            }, { threshold: 0.3 }).observe(win);
+        })();
+
+        // ── Cursor Ring (lagging corner brackets) ──
+        (function () {
+            if (!window.matchMedia('(pointer: fine)').matches) return;
+            const ring = document.getElementById('cursor-ring');
+            if (!ring) return;
+
+            let mx = innerWidth / 2, my = innerHeight / 2;
+            let rx = mx, ry = my, rot = 0, hover = false, punch = 1;
+
+            document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
+            document.querySelectorAll('.cursor-hover, a, button, input, textarea').forEach(el => {
+                el.addEventListener('mouseenter', () => hover = true);
+                el.addEventListener('mouseleave', () => hover = false);
+            });
+            document.addEventListener('mousedown', () => { punch = 0.55; });
+
+            (function loop() {
+                rx += (mx - rx) * 0.16;
+                ry += (my - ry) * 0.16;
+                const speed = Math.hypot(mx - rx, my - ry);
+                rot += 0.8 + speed * 0.12;                 // spins faster the faster you move
+                punch += (1 - punch) * 0.18;               // ease back after click
+                const scale = (hover ? 1.55 : 1) * punch;
+                ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%,-50%) rotate(${rot}deg) scale(${scale})`;
+                requestAnimationFrame(loop);
+            })();
+        })();
+
+        // ── Magnetic Buttons ──
+        (function () {
+            if (!window.matchMedia('(pointer: fine)').matches) return;
+            document.querySelectorAll('.magnetic').forEach(el => {
+                el.addEventListener('mousemove', (e) => {
+                    const r = el.getBoundingClientRect();
+                    const dx = e.clientX - (r.left + r.width / 2);
+                    const dy = e.clientY - (r.top + r.height / 2);
+                    el.style.transform = `translate(${dx * 0.18}px, ${dy * 0.18}px)`;
+                });
+                el.addEventListener('mouseleave', () => {
+                    el.style.transition = 'transform .3s cubic-bezier(.2,.8,.3,1.2)';
+                    el.style.transform = '';
+                    setTimeout(() => el.style.transition = '', 300);
+                });
+            });
         })();
     </script>
 </body>
