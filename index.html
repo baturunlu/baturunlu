@@ -18,7 +18,7 @@
     <meta name="description"
         content="Baturalp Unlu (Batur Unlu) — 2021 Tokyo Olympian & Software Engineer at NCR Voyix in Atlanta, GA. Specializing in SaaS microservices, multi-tenant authentication, SSO, OAuth, Okta, and enterprise-scale identity platforms. Georgia Tech CS graduate.">
     <meta name="keywords"
-        content="Baturalp Unlu, Batur Unlu, Baturalp Ünlü, Software Engineer, NCR Voyix, SaaS, Microservices, Multi-tenant, Authentication, SSO, OAuth, Okta, Identity Access Management, Redis, C#, .NET, React, TypeScript, Python, AWS, Docker, Kubernetes, Georgia Tech, 2021 Tokyo Olympics, Olympic Swimmer, Turkish Swimmer, Atlanta Software Engineer, Portfolio">
+        content="Baturalp Unlu, Batur Unlu, Baturalp Ünlü, Software Engineer, NCR Voyix, SaaS, Microservices, Multi-tenant, Authentication, SSO, OAuth, Okta, Identity Access Management, Redis, C#, .NET, React, TypeScript, Python, GCP, Terraform, Docker, Kubernetes, Georgia Tech, 2021 Tokyo Olympics, Olympic Swimmer, Turkish Swimmer, Atlanta Software Engineer, Portfolio">
     <meta name="author" content="Baturalp Unlu">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
@@ -102,7 +102,7 @@
         "@type": "Country",
         "name": "Turkey" 
       },
-      "knowsAbout": ["C#", ".NET", "JavaScript", "TypeScript", "React", "Python", "SQL", "PostgreSQL", "HTML", "CSS", "PyTorch", "NumPy", "AWS", "Docker", "Kubernetes", "GCP", "Redis", "Okta", "LaunchDarkly", "Databricks", "Cypress", "SonarQube", "Git", "JIRA", "SaaS Microservices", "Multi-tenant Architecture", "Authentication", "SSO", "OAuth", "Identity Access Management"],
+      "knowsAbout": ["C#", ".NET", "JavaScript", "TypeScript", "React", "Python", "SQL", "PostgreSQL", "HTML", "CSS", "PyTorch", "NumPy", "Terraform", "Helm", "Docker", "Kubernetes", "GCP", "Redis", "Okta", "LaunchDarkly", "Databricks", "Cypress", "SonarQube", "Git", "JIRA", "SaaS Microservices", "Multi-tenant Architecture", "Authentication", "SSO", "OAuth", "Identity Access Management"],
       "hasOccupation": [
         {
           "@type": "Occupation",
@@ -526,7 +526,7 @@
                     class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
                     VIEW DATABASE
                 </a>
-                <a href="Assets/Resume/batur_unlu_resume_06.pdf" download
+                <a href="Assets/Resume/batur_unlu_resume_07.pdf" download
                     class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
                     <i class="ri-download-line"></i> RESUME
                 </a>
@@ -537,7 +537,7 @@
     <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
         <div class="marquee-container font-mono font-bold text-2xl text-white">
             <div class="marquee-content">
-                /// 2021 TOKYO OLYMPIAN /// SOFTWARE ENGINEER /// NCR VOYIX /// GEORGIA TECH /// 100K+ USERS /// REDIS • OKTA • AWS /// AUTHENTICATION SYSTEMS /// OPEN TO WORK /// TURKISH SWIMMER 🇹🇷 /// SOFTWARE ENGINEER /// NCR VOYIX ///
+                /// 2021 TOKYO OLYMPIAN /// SOFTWARE ENGINEER /// NCR VOYIX /// GEORGIA TECH /// 100K+ USERS /// REDIS • OKTA • GCP /// AUTHENTICATION SYSTEMS /// OPEN TO WORK /// TURKISH SWIMMER 🇹🇷 /// SOFTWARE ENGINEER /// NCR VOYIX ///
             </div>
         </div>
     </div>
@@ -561,7 +561,7 @@
                     > Building secure, high-scale infrastructure supporting 100K+ global users.<br>
                     > Authentication, SSO & identity-access platforms across NCR's enterprise ecosystem.<br>
                     > Distributed auth & access infra — 19M monthly API calls · OAuth · Okta · Redis.<br>
-                    > LaunchDarkly · AWS · Docker · Kubernetes · SonarQube · JIRA.<br>
+                    > GCP · Kubernetes · Terraform · Docker · LaunchDarkly · SonarQube.<br>
                     > Georgia Tech CS — AI & Media concentration · U.S. Permanent Resident.
                 </p>
 
@@ -745,10 +745,11 @@
                     </div>
                     <p class="font-mono text-xl mb-4 text-neo-orange font-bold">@ NCR VOYIX · Atlanta, GA</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
-                        <li>Standardized authentication and SSO across <b>30+ apps</b> for <b>20+ teams</b> by building shared platform components in TypeScript, React, and C#/.NET for NCR's multi-tenant SaaS ecosystem.</li>
-                        <li>Reduced token introspection latency <b>75%</b> (200ms → 50ms) across <b>50K+ weekly</b> auth requests by designing a distributed Redis caching layer supporting <b>19M monthly</b> OAuth API calls.</li>
-                        <li>Enabled MFA for <b>100K+ enterprise users</b> by implementing Okta step-up authentication workflows with LaunchDarkly feature flags across email, SMS, and authenticator channels.</li>
-                        <li>Contributed to a partner-facing API gateway and provisioning platform (Cloud Connect), enabling secure third-party integrations and real-time provisioning via distributed system workflows.</li>
+                        <li>Standardized authentication, organization switching, and site context across <b>30+ apps</b> by building shared React/Angular component libraries published via JFrog; implemented <b>MFA end-to-end</b> in three applications.</li>
+                        <li>Secured <b>19M monthly</b> API requests with multi-tenant identity &amp; access-control services (C#, .NET, Okta) using OAuth 2.0/OIDC and RBAC/LBAC; cut token introspection latency <b>75%</b> (200ms → 50ms) with a distributed Redis cache.</li>
+                        <li>Maintain reliability for <b>billions of monthly API calls</b> across <b>500+ ISV partners</b> and <b>50K merchant locations</b> by owning production support for Cloud Connect, NCR's partner API gateway, isolating faults via BigQuery.</li>
+                        <li>Leading a <b>zero-downtime cloud migration</b> of NCR's identity system solo: continuous database replication (GCP DMS), Terraform provisioning, and the cutover plan across dev, staging, and production.</li>
+                        <li>Protect <b>FedRAMP compliance</b> by managing security vulnerabilities platform-wide — scanning and remediating container images and running secrets migrations.</li>
                     </ul>
                 </div>
             </div>
@@ -763,8 +764,8 @@
                     </div>
                     <p class="font-mono text-xl mb-4 text-neo-blue font-bold">@ NCR VOYIX · Atlanta, GA</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
-                        <li>Expanded NCR Marketplace to <b>5,000+ SMBs</b> — cutting setup time <b>60%</b> — by launching Google Business Profile in Angular, TypeScript, and C#/.NET with OAuth data flows.</li>
-                        <li>Cut partner onboarding time <b>40%</b> by delivering microservices-compatible data-migration workflows with JSON-based API integrations across the full SDLC in Agile sprints.</li>
+                        <li>Expanded NCR Marketplace to <b>5,000+ SMBs</b> by launching a Google Business Profile integration in Angular, TypeScript, and C#/.NET with OAuth flows for location syncing — eliminating a <b>10-step manual setup</b> process.</li>
+                        <li>Cut partner onboarding time by delivering microservices-compatible data-migration workflows in Agile sprints, carrying them across the <b>full SDLC</b> from requirements through production deployment.</li>
                     </ul>
                 </div>
             </div>
@@ -779,8 +780,8 @@
                     </div>
                     <p class="font-mono text-xl mb-4 text-neo-green font-bold">@ UPS CAPITAL · Atlanta, GA</p>
                     <ul class="list-disc list-inside font-mono text-gray-700 space-y-2">
-                        <li>Cut operations query resolution time by building a Generative AI chatbot on Databricks integrating an LLM (OpenAI MosaicML) with Python and PyTorch for <b>200+ staff</b>.</li>
-                        <li>Accelerated 3PL integrations by leading Angular + TypeScript development of a microservices-ready claims portal, decoupling frontend and backend to reduce integration effort <b>~30%</b>.</li>
+                        <li>Reduced internal query resolution time for operations teams by building a <b>generative AI chatbot</b> on Databricks with Streamlit, MosaicML, and PyTorch.</li>
+                        <li>Accelerated 3PL integrations (including <b>Pirate Ship</b>) by leading component-based development of a claims-portal template in Angular, TypeScript, and SCSS, decoupling frontend from backend service logic.</li>
                     </ul>
                 </div>
             </div>
@@ -830,9 +831,9 @@
 
                 <div class="impact-card group border-white/10 p-8 flex flex-col items-center justify-center text-center hover:bg-neo-orange transition-colors duration-150 cursor-hover">
                     <div class="text-5xl md:text-6xl font-black text-white group-hover:text-black leading-none mb-2 tabular-nums">
-                        <span class="counter" data-target="50" data-suffix="K+">0</span>
+                        <span class="counter" data-target="500" data-suffix="+">0</span>
                     </div>
-                    <div class="font-mono text-[10px] text-neo-orange group-hover:text-black uppercase tracking-widest opacity-80">Weekly Auth Req.</div>
+                    <div class="font-mono text-[10px] text-neo-orange group-hover:text-black uppercase tracking-widest opacity-80">ISV Partners</div>
                 </div>
 
             </div>
@@ -1454,7 +1455,7 @@
                     <div class="flex justify-between items-start">
                         <div>
                             <h3 class="text-3xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">AI Internal Chatbot</h3>
-                            <p class="font-mono text-sm mb-4 max-w-xs">LLM-powered chatbot for UPS Capital built on Databricks. Fine-tuned with PyTorch & MosaicML — improved query resolution by 40%, accuracy by 15%.</p>
+                            <p class="font-mono text-sm mb-4 max-w-xs">LLM-powered chatbot for UPS Capital built on Databricks with Streamlit, MosaicML & PyTorch — reduced internal query resolution time for operations teams.</p>
                             <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
                                 <span class="bg-neo-black text-white px-2 py-1">PyTorch</span>
                                 <span class="bg-neo-black text-white px-2 py-1">Databricks</span>
